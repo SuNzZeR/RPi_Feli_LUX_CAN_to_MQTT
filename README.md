@@ -189,32 +189,46 @@ sudo systemctl start feli_lux_can_to_mqtt.service
 
 Ersetze `{Felicity_Nr}` durch die tatsächliche Speicher-Nummer in allen Topics.
 
-| Lesende Topics (Veröffentlichen)                                  | Beschreibung                       | Wert                                              |
-|-------------------------------------------------------------------|------------------------------------|---------------------------------------------------|
-| solar/felicity_battery/{Felicity_Nr}/Battery_SOC                  | Ladezustand                        | Integer (in %)                                    |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Voltage              | Spannung                           | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Current              | Strom                              | Gleitkommazahl (in Ampere)                        |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Power                | Leistung                           | Gleitkommazahl (in Watt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Temperature_01       | Temperatur Sensor 1                | Gleitkommazahl (in °C)                            |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Temperature_02       | Temperatur Sensor 2                | Gleitkommazahl (in °C)                            |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Temperature_03       | Temperatur Sensor 3                | Gleitkommazahl (in °C)                            |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Temperature_04       | Temperatur Sensor 4                | Gleitkommazahl (in °C)                            |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_01_Voltage      | Spannung Zelle 1                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_02_Voltage      | Spannung Zelle 2                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_03_Voltage      | Spannung Zelle 3                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_04_Voltage      | Spannung Zelle 4                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_05_Voltage      | Spannung Zelle 5                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_06_Voltage      | Spannung Zelle 6                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_07_Voltage      | Spannung Zelle 7                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_08_Voltage      | Spannung Zelle 8                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_09_Voltage      | Spannung Zelle 9                   | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_10_Voltage      | Spannung Zelle 10                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_11_Voltage      | Spannung Zelle 11                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_12_Voltage      | Spannung Zelle 12                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_13_Voltage      | Spannung Zelle 13                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_14_Voltage      | Spannung Zelle 14                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_15_Voltage      | Spannung Zelle 15                  | Gleitkommazahl (in Volt)                          |
-| solar/felicity_battery/{Felicity_Nr}/Battery_Cell_16_Voltage      | Spannung Zelle 16                  | Gleitkommazahl (in Volt)                          |
+| Basis-Topic                                               |
+|-----------------------------------------------------------|
+| solar/feli_lux_battery/{Felicity_Nr}/                     |
+
+Die vollständigen MQTT-Topics setzen sich aus dem Basis-Topic und dem jeweiligen Feldnamen zusammen.
+Beispiel: `solar/feli_lux_battery/0001/Battery_SOC`
+
+| Feldname                                  | Beschreibung                       | Wert                                              |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_SOC                               | Ladezustand                        | Integer (in %)                                    |
+| Battery_SOH                               | Gesundheitszustand                 | Integer (in %)                                    |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_Voltage                           | Spannung                           | Gleitkommazahl (in Volt)                          |
+| Battery_Current                           | Strom                              | Gleitkommazahl (in Ampere)                        |
+| Battery_Power                             | Leistung                           | Gleitkommazahl (in Watt)                          |
+| Battery_Temperature_Avg                   | Durchschnittliche Zelltemperatur   | Gleitkommazahl (in °C)                            |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_Voltage_Limit_Charge              | Ladespannungsgrenze                | Gleitkommazahl (in Volt)                          |
+| Battery_Current_Limit_Charge              | Ladestromgrenze                    | Gleitkommazahl (in Ampere)                        |
+| Battery_Voltage_Limit_Discharge           | Entladespannungsgrenze             | Gleitkommazahl (in Volt)                          |
+| Battery_Current_Limit_Discharge           | Entladestromgrenze                 | Gleitkommazahl (in Ampere)                        |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_Charge_Enable                     | Laden erlaubt                      | String ("on" oder "off")                          |
+| Battery_Discharge_Enable                  | Entladen erlaubt                   | String ("on" oder "off")                          |
+| Battery_Full_Charge_Request               | SOC-Kalibrierung angefordert       | String ("on" oder "off")                          |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_Protection_Over_Voltage           | Überspannung                       | String ("on" oder "off")                          |
+| Battery_Protection_Under_Voltage          | Unterspannung                      | String ("on" oder "off")                          |
+| Battery_Protection_Over_Temperature       | Übertemperatur                     | String ("on" oder "off")                          |
+| Battery_Protection_Under_Temperature      | Untertemperatur                    | String ("on" oder "off")                          |
+| Battery_Protection_Discharge_Over_Current | Entladestrom zu hoch               | String ("on" oder "off")                          |
+| Battery_Protection_Charge__Over_Current   | Ladestrom zu hoch                  | String ("on" oder "off")                          |
+| Battery_Protection_System_Error           | Systemfehler                       | String ("on" oder "off")                          |
+|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| Battery_Alarm_High_Voltage                | Überspannungswarnung               | String ("on" oder "off")                          |
+| Battery_Alarm_Low_Voltage                 | Unterspannungswarnung              | String ("on" oder "off")                          |
+| Battery_Alarm_High_Temperature            | Übertemperaturwarnung              | String ("on" oder "off")                          |
+| Battery_Alarm_Low_Temperature             | Untertemperaturwarnung             | String ("on" oder "off")                          |
+| Battery_Alarm_Discharge_High_Current      | Entladestromwarnung                | String ("on" oder "off")                          |
+| Battery_Alarm_Charge_High_Current         | Ladestromwarnung                   | String ("on" oder "off")                          |
 
 ## Lizenz
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE) Datei für Details.
