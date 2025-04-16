@@ -43,11 +43,11 @@ Stelle sicher, dass die Batterie richtig am RPi angeschlossen ist.
 
 | LINK 0/LINK 1                | RPi RS485 CAN HAT                   |
 |------------------------------|-------------------------------------|
-| Pin 3                        | Anschluss L                         |
-| Pin 4                        | Anschluss H                         | 
+| Pin 7                        | Anschluss L                         |
+| Pin 8                        | Anschluss H                         | 
 
 <p align="center">
-  <img src="Verkabelung_3-4.jpg" alt="Verkabelung">
+  <img src="Verkabelung_7-8.jpg" alt="Verkabelung">
 </p>
 
 #### Alle Anderen LUX Speicher
@@ -56,11 +56,11 @@ Stelle sicher, dass die Batterie richtig am RPi angeschlossen ist.
 
 | LINK 0/LINK 1                | RPi RS485 CAN HAT                   |
 |------------------------------|-------------------------------------|
-| Pin 7                        | Anschluss L                         |
-| Pin 8                        | Anschluss H                         | 
+| Pin 3                        | Anschluss L                         |
+| Pin 4                        | Anschluss H                         | 
 
 <p align="center">
-  <img src="Verkabelung_7-8.jpg" alt="Verkabelung">
+  <img src="Verkabelung_3-4.jpg" alt="Verkabelung">
 </p>
 
 ### Installation
