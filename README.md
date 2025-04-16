@@ -200,21 +200,21 @@ Beispiel: `solar/feli_lux_battery/0001/Battery_SOC`
 |-------------------------------------------|------------------------------------|---------------------------------------------------|
 | Battery_SOC                               | Ladezustand                        | Integer (in %)                                    |
 | Battery_SOH                               | Gesundheitszustand                 | Integer (in %)                                    |
-|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| -                                         | -                                  | -                                                 |
 | Battery_Voltage                           | Spannung                           | Gleitkommazahl (in Volt)                          |
 | Battery_Current                           | Strom                              | Gleitkommazahl (in Ampere)                        |
 | Battery_Power                             | Leistung                           | Gleitkommazahl (in Watt)                          |
 | Battery_Temperature_Avg                   | Durchschnittliche Zelltemperatur   | Gleitkommazahl (in °C)                            |
-|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| -                                         | -                                  | -                                                 |
 | Battery_Voltage_Limit_Charge              | Ladespannungsgrenze                | Gleitkommazahl (in Volt)                          |
 | Battery_Current_Limit_Charge              | Ladestromgrenze                    | Gleitkommazahl (in Ampere)                        |
 | Battery_Voltage_Limit_Discharge           | Entladespannungsgrenze             | Gleitkommazahl (in Volt)                          |
 | Battery_Current_Limit_Discharge           | Entladestromgrenze                 | Gleitkommazahl (in Ampere)                        |
-|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| -                                         | -                                  | -                                                 |
 | Battery_Charge_Enable                     | Laden erlaubt                      | String ("on" oder "off")                          |
 | Battery_Discharge_Enable                  | Entladen erlaubt                   | String ("on" oder "off")                          |
 | Battery_Full_Charge_Request               | SOC-Kalibrierung angefordert       | String ("on" oder "off")                          |
-|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| -                                         | -                                  | -                                                 |
 | Battery_Protection_Over_Voltage           | Überspannung                       | String ("on" oder "off")                          |
 | Battery_Protection_Under_Voltage          | Unterspannung                      | String ("on" oder "off")                          |
 | Battery_Protection_Over_Temperature       | Übertemperatur                     | String ("on" oder "off")                          |
@@ -222,7 +222,7 @@ Beispiel: `solar/feli_lux_battery/0001/Battery_SOC`
 | Battery_Protection_Discharge_Over_Current | Entladestrom zu hoch               | String ("on" oder "off")                          |
 | Battery_Protection_Charge__Over_Current   | Ladestrom zu hoch                  | String ("on" oder "off")                          |
 | Battery_Protection_System_Error           | Systemfehler                       | String ("on" oder "off")                          |
-|-------------------------------------------|------------------------------------|---------------------------------------------------|
+| -                                         | -                                  | -                                                 |
 | Battery_Alarm_High_Voltage                | Überspannungswarnung               | String ("on" oder "off")                          |
 | Battery_Alarm_Low_Voltage                 | Unterspannungswarnung              | String ("on" oder "off")                          |
 | Battery_Alarm_High_Temperature            | Übertemperaturwarnung              | String ("on" oder "off")                          |
