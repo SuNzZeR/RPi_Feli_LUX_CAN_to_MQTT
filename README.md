@@ -220,7 +220,7 @@ Beispiel: `solar/feli_lux_battery/0001/Battery_SOC`
 | Battery_Protection_Over_Temperature       | Übertemperatur                     | String ("on" oder "off")                          |
 | Battery_Protection_Under_Temperature      | Untertemperatur                    | String ("on" oder "off")                          |
 | Battery_Protection_Discharge_Over_Current | Entladestrom zu hoch               | String ("on" oder "off")                          |
-| Battery_Protection_Charge__Over_Current   | Ladestrom zu hoch                  | String ("on" oder "off")                          |
+| Battery_Protection_Charge_Over_Current    | Ladestrom zu hoch                  | String ("on" oder "off")                          |
 | Battery_Protection_System_Error           | Systemfehler                       | String ("on" oder "off")                          |
 | -                                         | -                                  | -                                                 |
 | Battery_Alarm_High_Voltage                | Überspannungswarnung               | String ("on" oder "off")                          |
