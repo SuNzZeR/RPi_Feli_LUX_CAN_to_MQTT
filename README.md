@@ -41,7 +41,7 @@ Das Skript liest Daten von dem Speicher über CAN, verarbeitet sie und veröffen
 
 Stelle sicher, dass die Batterie richtig am RPi angeschlossen ist.
 
-| LINK 0/LINK 1                | RPi RS485 CAN HAT                   |
+| LINK 0/LINK 1                | RPi RS485 CAN HAT (mit 120 Ohm Widerstand)                  |
 |------------------------------|-------------------------------------|
 | Pin 7                        | Anschluss L                         |
 | Pin 8                        | Anschluss H                         | 
@@ -54,7 +54,7 @@ Stelle sicher, dass die Batterie richtig am RPi angeschlossen ist.
 
 Stelle sicher, dass die Batterie richtig am RPi angeschlossen ist.
 
-| LINK 0/LINK 1                | RPi RS485 CAN HAT                   |
+| LINK 0/LINK 1                | RPi RS485 CAN HAT (mit 120 Ohm Widerstand)                  |
 |------------------------------|-------------------------------------|
 | Pin 3                        | Anschluss L                         |
 | Pin 4                        | Anschluss H                         | 
