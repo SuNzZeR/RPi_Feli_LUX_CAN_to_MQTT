@@ -95,7 +95,7 @@ cd Feli_LUX_CAN_to_MQTT
 ```
 ##### Anpassen der [Konfiguration](#konfiguration) des Programms
 ```bash
-sudo nano feli_lux_can_to_mqtt.py
+sudo nano feli_lux_can_to_mqtt_config.py
 ```
 Hinweis: Editor mit STRG+X beenden, dabei das Speichern nicht vergessen! „Save modified buffer?“ -> y
 
